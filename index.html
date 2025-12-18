@@ -9,11 +9,11 @@
         body {
             /* Your Custom Background */
             background-color: #E0F7FA;
-            background-image:  url('assets/bg.png'); /* Ensure this file exists! */
+            background-image:  url('assets/bg.png'); /* Ensure this file exists!  */
             background-repeat: repeat;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 0;
+            padding:  0;
             color: #333;
             scroll-behavior: smooth; /* Makes the "Jump" smooth */
         }
@@ -55,12 +55,12 @@
             top: -80px;         /* Moved further up */
             left: -400px;       /* Start further off-screen */
             z-index: 10;
-            animation:  flyIn 3s ease-out forwards, float 3s ease-in-out infinite;
+            animation: flyIn 3s ease-out forwards, float 3s ease-in-out infinite;
         }
 
         @keyframes flyIn {
             0%   { left: -400px; }
-            100% { left: 50%; transform:  translateX(-50%); } /* Center it */
+            100% { left: 65%; transform: translateX(-50%); } /* Moved further right from 50% to 65% */
         }
         @keyframes float {
             0%   { margin-top: 0px; }
@@ -70,15 +70,15 @@
 
         /* --- 5. SECTIONS (The "Cards") --- */
         .pixel-card {
-            background:  white;
+            background: white;
             border: 4px solid #0277BD;
             box-shadow: 8px 8px 0px #81D4FA;
-            padding:  40px;
+            padding: 40px;
             margin-bottom: 50px; /* Space between sections */
             scroll-margin-top: 100px; /* Fixes sticky header overlap */
         }
 
-        h1 { color: #0277BD; text-transform: uppercase; margin-top:  0; border-bottom: 4px solid #0277BD; display: inline-block;}
+        h1 { color: #0277BD; text-transform: uppercase; margin-top: 0; border-bottom: 4px solid #0277BD; display: inline-block;}
         h2 { background: #B3E5FC; display: inline-block; padding: 5px 10px; border: 2px solid #0277BD; margin-top: 0; }
         
         /* Specific Styles for Lists */
@@ -87,7 +87,7 @@
         
         /* Grid for Projects */
         .project-grid { display: flex; gap: 20px; flex-wrap: wrap; }
-        .project-card { border: 2px solid #333; padding: 10px; background:  #fafafa; flex: 1 1 300px;}
+        .project-card { border: 2px solid #333; padding: 10px; background: #fafafa; flex: 1 1 300px;}
         .project-img { width: 100%; height: 150px; object-fit: cover; background: #ddd; border: 2px solid #333; margin-bottom: 10px;}
 
         /* --- 6. FOOTER CREDITS --- */
@@ -129,18 +129,18 @@
 
         <div id="about" class="pixel-card">
             <h1>Ebtisam Alshehri</h1>
-            <p><b>ML Researcher @ MIT BCS & Broad Institute</b></p>
+            <p><b>ML Researcher @ MIT & Broad Institute of MIT and Harvard</b></p>
             <p>Hi, I'm Ebtisam and welcome to my World!</p>
-            <p> I am a visting researcher at MIT, I build multimodal foundation models that learn representations of human brain activity.! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a> and under the joint supervision of <a href="https://mcgovern.mit.edu/profile/ila-fiete/" style="color:#E91E63">Prof. Illa Fiete</a> and <a href="https://pliang279.github.io" style="color:#E91E63">Prof. Paul Liang</a>. I'm also doing research at the Broad Institute of MIT and Harvard, at <a href="https://cellarium.ai" style="color:#E91E63">Cellarium AI Lab</a>, under the supervision of <a href="https://brain.broadinstitute.org/team/mehrtash_babadi/" style="color:#E91E63">Dr. Mehrtash Babadi</a>, and <a href="https://www.broadinstitute.org/bios/stephen-fleming" style="color:#E91E63">Dr. Stephen Fleming</a>.I'm dedicated to building meaningful, human-centered AI that leaves a positive impact on the world.</p>
+            <p> I am a visting researcher at MIT, I build multimodal foundation models that learn representations of human brain activity.! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a> and under the joint supervision of <a href="https://mcgovern.mit.edu/profile/ila-fiete/" style="color:#E91E63">Prof. Illa Fiete</a> and <a href="https://pliang279.github.io" style="color:#E91E63">Prof. Paul Liang</a>. I'm also doing research at the Broad Institute of MIT and Harvard, at <a href="https://cellarium.ai" style="color:#E91E63">Cellarium AI Lab</a>, under the supervision of <a href="https://brain.broadinstitute.org/team/mehrtash_babadi/" style="color:#E91E63">Dr. Mehrtash Babadi</a>, and <a href="https://www.broadinstitute.org/bios/stephen-fleming" style="color:#E91E63">Dr. Stephen Fleming</a>. I'm dedicated to building meaningful, human-centered AI that leaves a positive impact on the world.</p>
             <p>👉 <a href="mailto:email@mit.edu" style="color:#E91E63">Email</a></p>
 
             <hr style="border: 2px solid #0277BD; margin: 20px 0;">
             
             <h3>📰 Latest News</h3>
             <ul style="padding-left: 20px;">
-                <li><b>Sep 2025:</b> I am a Visitng Researcher ar MIT 🦫 !</li>
-                <li><b>July 2025:</b> I am a TA for the PIF GDP!</li>
-                <li><b>May 2025:</b> Graduated with Bachelor's! 🎓.</li>
+                <li><b>Sep 2025:</b> Joined MIT as a Visitng Researcher at BCS and Mcgovern Institute 🦫 !</li>
+                <li><b>July 2025:</b> Served as a TA for the PIF GDP program!</li>
+                <li><b>May 2025:</b> Graduated with a Bachelor's in AI with First Honors!🎓.</li>
             </ul>
         </div>
 
@@ -172,7 +172,7 @@
                     <img src="project1.jpg" class="project-img"> 
                     <h3>A supervised ontology-aware cell annotation method for
                      single-cell transcriptomic data</h3>
-                    <p>A 3-axis robot that paints watercolor based on sound. </p>
+                    <p>A 3-axis robot that paints watercolor based on sound.</p>
                     <a href="#" style="color:#E91E63; font-weight:bold;">[View Details]</a>
                 </div>
 
@@ -201,13 +201,13 @@
                 <span class="date">Feb 2024</span>
                 <h3>Advanced Artificial Intelligence</h3>
                 <i>Grader</i>
-                <p>Graded Python assignments and final projects. </p>
+                <p>Graded Python assignments and final projects.</p>
             </div>
             <div class="exp-item">
                 <span class="date">July 2025 2024</span>
                 <h3>Advanced Computer Vision</h3>
                 <i>Grader</i>
-                <p>Graded Python assignments and final projects. </p>
+                <p>Graded Python assignments and final projects.</p>
             </div>
         </div>
 
