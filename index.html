@@ -51,21 +51,16 @@
         /* --- 4. FLYING CHARACTER (Your Custom Settings) --- */
         .flying-char {
             position: absolute;
-            width: 250px;       /* Large size */
+            width: 350px;       /* Increased from 250px to 350px */
             top: -50px;         /* Height adjustment */
             left: -300px;       /* Start off-screen */
             z-index: 10;
-            animation: flyIn 3s ease-out forwards, float 3s ease-in-out infinite;
+            animation: flyIn 3s ease-out forwards; /* Removed the float animation */
         }
 
         @keyframes flyIn {
             0%   { left: -300px; }
             100% { left: 50%; transform: translateX(-50%); } /* Center it */
-        }
-        @keyframes float {
-            0%   { margin-top: 0px; }
-            50%  { margin-top: -20px; }
-            100% { margin-top: 0px; }
         }
 
         /* --- 5. SECTIONS (The "Cards") --- */
@@ -109,7 +104,7 @@
             <h1>Ebtisam Alshehri</h1>
             <p><b>ML Researcher @ MIT BCS & Broad Institute</b></p>
             <p>Hi, I'm Ebtisam and welcome to my World!</p>
-            <p>I'm an ML researcher currently doing research at MIT on neuroscience for AI (model development)! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a> and co-advised by <a href="https://mcgovern.mit.edu/profile/ila-fiete/" style="color:#E91E63">Prof. Illa Fiete</a> and <a href="https://www.cs.cmu.edu/~pliang/" style="color:#E91E63">Prof. Paul Liang</a>. I'm also doing research at the Broad Institute of MIT and Harvard, at <a href="https://cellarium.ai/team/" style="color:#E91E63">Cellarium AI Lab</a>, under the supervision of <a href="https://brain.broadinstitute.org/team/mehrtash_babadi/" style="color:#E91E63">Dr. Mehrtash Babadi</a>, and <a href="https://www.broadinstitute.org/bios/stephen-fleming" style="color:#E91E63">Dr. Stephen Fleming</a>. I'm very interested in building meaningful human-centered AI systems that leaves a positive impact on this world!</p>
+            <p>I'm an ML researcher currently doing research at MIT on neuroscience for AI (model development)! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a[...]
             <p>👉 <a href="mailto:email@mit.edu" style="color:#E91E63">Email</a> | <a href="#" style="color:#E91E63">CV / Resume</a></p>
 
             <hr style="border: 2px solid #0277BD; margin: 20px 0;">
