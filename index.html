@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebtisam Alshehri | My Portfolio</title>
+    <style>
+        /* --- 1. GLOBAL PIXEL STYLE --- */
+        body {
+            /* Your Custom Background */
+            background-color: #E0F7FA;
+            background-image: url('bg.png'); /* Ensure this file exists! */
+            background-repeat: repeat;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            scroll-behavior: smooth; /* Makes the "Jump" smooth */
+        }
+
+        /* --- 2. NAVIGATION BAR (Sticky at top) --- */
+        nav {
+            background: #0277BD;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            border-bottom: 4px solid #01579B;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 15px;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #E1F5FE;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        /* --- 3. MAIN CONTAINER --- */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        /* --- 4. FLYING CHARACTER (Your Custom Settings) --- */
+        .flying-char {
+            position: absolute;
+            width: 250px;       /* Large size */
+            top: -50px;         /* Height adjustment */
+            left: -300px;       /* Start off-screen */
+            z-index: 10;
+            animation: flyIn 3s ease-out forwards, float 3s ease-in-out infinite;
+        }
+
+        @keyframes flyIn {
+            0%   { left: -300px; }
+            100% { left: 50%; transform: translateX(-50%); } /* Center it */
+        }
+        @keyframes float {
+            0%   { margin-top: 0px; }
+            50%  { margin-top: -20px; }
+            100% { margin-top: 0px; }
+        }
+
+        /* --- 5. SECTIONS (The "Cards") --- */
+        .pixel-card {
+            background: white;
+            border: 4px solid #0277BD;
+            box-shadow: 8px 8px 0px #81D4FA;
+            padding: 40px;
+            margin-bottom: 50px; /* Space between sections */
+            scroll-margin-top: 100px; /* Fixes sticky header overlap */
+        }
+
+        h1 { color: #0277BD; text-transform: uppercase; margin-top: 0; border-bottom: 4px solid #0277BD; display: inline-block;}
+        h2 { background: #B3E5FC; display: inline-block; padding: 5px 10px; border: 2px solid #0277BD; margin-top: 0; }
+        
+        /* Specific Styles for Lists */
+        .exp-item { margin-bottom: 20px; border-bottom: 2px dashed #ddd; padding-bottom: 10px; }
+        .date { float: right; font-weight: bold; color: #0277BD; }
+        
+        /* Grid for Projects */
+        .project-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .project-card { border: 2px solid #333; padding: 10px; background: #fafafa; flex: 1 1 300px;}
+        .project-img { width: 100%; height: 150px; object-fit: cover; background: #ddd; border: 2px solid #333; margin-bottom: 10px;}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About & News</a>
+        <a href="#experience">Research Exp</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+    </nav>
+
+    <div class="container">
+        
+        <img src="char.png" class="flying-char">
+
+        <div id="about" class="pixel-card">
+            <h1>Sam Batsy</h1>
+            <p><b>Visiting Researcher @ MIT BCS</b></p>
+            <p>Hi! I am interested in <b>HCI</b>, <b>Trustworthy AI</b>, and <b>Multimodality AI</b>. Welcome to my world.</p>
+            <p>👉 <a href="mailto:email@mit.edu" style="color:#E91E63">Email</a> | <a href="#" style="color:#E91E63">CV / Resume</a></p>
+
+            <hr style="border: 2px solid #0277BD; margin: 20px 0;">
+            
+            <h3>📰 Latest News</h3>
+            <ul style="padding-left: 20px;">
+                <li><b>July 2025:</b>I am a TA for the PIF GDP!</li>
+                <li><b>May 2025:</b> Graduated with Bachelor's! 🎓.</li>
+            </ul>
+        </div>
+
+        <div id="experience" class="pixel-card">
+            <h2>🧪 Research Experience</h2>
+            <br><br>
+            
+            <div class="exp-item">
+                <span class="date">Sept 2024 - Present</span>
+                <h3>MIT</h3>
+                <i>Visiting Researcher</i>
+                <p>Developing wearable interfaces for haptic feedback. Published 1 paper at CHI.</p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">2022 - 2024</span>
+                <h3>Undergraduate Lab</h3>
+                <i>Researcher</i>
+                <p>Built a soft robot using pneumatic controls. Assisted in data analysis.</p>
+            </div>
+        </div>
+
+        <div id="projects" class="pixel-card">
+            <h2>🔬 Research Projects</h2>
+            <p>A collection of my academic work.</p>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="project1.jpg" class="project-img"> 
+                    <h3>The Painting Robot</h3>
+                    <p>A 3-axis robot that paints watercolor based on sound.</p>
+                    <a href="#" style="color:#E91E63; font-weight:bold;">[View Details]</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="project2.jpg" class="project-img">
+                    <h3>VR Haptic Glove</h3>
+                    <p>Feeling digital textures in a virtual world.</p>
+                    <a href="#" style="color:#E91E63; font-weight:bold;">[Read Paper]</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="teaching" class="pixel-card">
+            <h2>👩‍🏫 Teaching Experience</h2>
+            <br><br>
+            
+            <div class="exp-item">
+                <span class="date">Fall 2024</span>
+                <h3>Intro to Physical Computing</h3>
+                <i>Teaching Assistant</i>
+                <p>Helped 30 students debug Arduino code and soldering circuits. Held weekly office hours.</p>
+            </div>
+
+            <div class="exp-item">
+                <span class="date">Spring 2024</span>
+                <h3>Machine Learning 101</h3>
+                <i>Grader</i>
+                <p>Graded Python assignments and final projects.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
