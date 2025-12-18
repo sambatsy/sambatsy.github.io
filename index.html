@@ -9,7 +9,7 @@
         body {
             /* Your Custom Background */
             background-color: #E0F7FA;
-            background-image: url('assets/bg.png'); /* Ensure this file exists! */
+            background-image:  url('assets/bg.png'); /* Ensure this file exists! */
             background-repeat: repeat;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -51,29 +51,34 @@
         /* --- 4. FLYING CHARACTER (Your Custom Settings) --- */
         .flying-char {
             position: absolute;
-            width: 350px;       /* Increased from 250px to 350px */
-            top: -50px;         /* Height adjustment */
-            left: -300px;       /* Start off-screen */
+            width: 350px;       /* Bigger size (was 250px) */
+            top: -80px;         /* Moved further up */
+            left: -400px;       /* Start further off-screen */
             z-index: 10;
-            animation: flyIn 3s ease-out forwards; /* Removed the float animation */
+            animation:  flyIn 3s ease-out forwards, float 3s ease-in-out infinite;
         }
 
         @keyframes flyIn {
-            0%   { left: -300px; }
-            100% { left: 50%; transform: translateX(-50%); } /* Center it */
+            0%   { left: -400px; }
+            100% { left: 50%; transform:  translateX(-50%); } /* Center it */
+        }
+        @keyframes float {
+            0%   { margin-top: 0px; }
+            50%  { margin-top: -20px; }
+            100% { margin-top: 0px; }
         }
 
         /* --- 5. SECTIONS (The "Cards") --- */
         .pixel-card {
-            background: white;
+            background:  white;
             border: 4px solid #0277BD;
             box-shadow: 8px 8px 0px #81D4FA;
-            padding: 40px;
+            padding:  40px;
             margin-bottom: 50px; /* Space between sections */
             scroll-margin-top: 100px; /* Fixes sticky header overlap */
         }
 
-        h1 { color: #0277BD; text-transform: uppercase; margin-top: 0; border-bottom: 4px solid #0277BD; display: inline-block;}
+        h1 { color: #0277BD; text-transform: uppercase; margin-top:  0; border-bottom: 4px solid #0277BD; display: inline-block;}
         h2 { background: #B3E5FC; display: inline-block; padding: 5px 10px; border: 2px solid #0277BD; margin-top: 0; }
         
         /* Specific Styles for Lists */
@@ -82,7 +87,7 @@
         
         /* Grid for Projects */
         .project-grid { display: flex; gap: 20px; flex-wrap: wrap; }
-        .project-card { border: 2px solid #333; padding: 10px; background: #fafafa; flex: 1 1 300px;}
+        .project-card { border: 2px solid #333; padding: 10px; background:  #fafafa; flex: 1 1 300px;}
         .project-img { width: 100%; height: 150px; object-fit: cover; background: #ddd; border: 2px solid #333; margin-bottom: 10px;}
 
     </style>
@@ -104,14 +109,15 @@
             <h1>Ebtisam Alshehri</h1>
             <p><b>ML Researcher @ MIT BCS & Broad Institute</b></p>
             <p>Hi, I'm Ebtisam and welcome to my World!</p>
-            <p>I'm an ML researcher currently doing research at MIT on neuroscience for AI (model development)! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a[...]
-            <p>👉 <a href="mailto:email@mit.edu" style="color:#E91E63">Email</a> | <a href="#" style="color:#E91E63">CV / Resume</a></p>
+            <p> I am a visting researcher at MIT, I build multimodal foundation models that learn representations of human brain activity.! I'm mentored by <a href="https://jd730.github.io" style="color:#E91E63">Jaedong Hwang</a> and under the joint supervision of <a href="https://mcgovern.mit.edu/profile/ila-fiete/" style="color:#E91E63">Prof. Illa Fiete</a> and <a href="https://pliang279.github.io" style="color:#E91E63">Prof. Paul Liang</a>. I'm also doing research at the Broad Institute of MIT and Harvard, at <a href="https://cellarium.ai" style="color:#E91E63">Cellarium AI Lab</a>, under the supervision of <a href="https://brain.broadinstitute.org/team/mehrtash_babadi/" style="color:#E91E63">Dr. Mehrtash Babadi</a>, and <a href="https://www.broadinstitute.org/bios/stephen-fleming" style="color:#E91E63">Dr. Stephen Fleming</a>.I'm dedicated to building meaningful, human-centered AI that leaves a positive impact on the world.</p>
+            <p>👉 <a href="mailto:email@mit.edu" style="color:#E91E63">Email</a> 
 
             <hr style="border: 2px solid #0277BD; margin: 20px 0;">
             
             <h3>📰 Latest News</h3>
             <ul style="padding-left: 20px;">
-                <li><b>July 2025:</b>I am a TA for the PIF GDP!</li>
+                <li><b>Sep 2025:</b> I am a Visitng Researcher ar MIT 🦫 !</li>
+                <li><b>July 2025:</b> I am a TA for the PIF GDP!</li>
                 <li><b>May 2025:</b> Graduated with Bachelor's! 🎓.</li>
             </ul>
         </div>
@@ -124,13 +130,13 @@
                 <span class="date">Sept 2024 - Present</span>
                 <h3>MIT</h3>
                 <i>Visiting Researcher</i>
-                <p>Developing wearable interfaces for haptic feedback. Published 1 paper at CHI.</p>
+                <p>Brain and Cognitive Sciences.</p>
             </div>
 
             <div class="exp-item">
                 <span class="date">2022 - 2024</span>
-                <h3>Undergraduate Lab</h3>
-                <i>Researcher</i>
+                <h3>Broad Institute of MIT and Harvard</h3>
+                <i>ML Researcher</i>
                 <p>Built a soft robot using pneumatic controls. Assisted in data analysis.</p>
             </div>
         </div>
@@ -142,14 +148,16 @@
             <div class="project-grid">
                 <div class="project-card">
                     <img src="project1.jpg" class="project-img"> 
-                    <h3>The Painting Robot</h3>
-                    <p>A 3-axis robot that paints watercolor based on sound.</p>
+                    <h3>A supervised ontology-aware cell annotation method for
+                     single-cell transcriptomic data</h3>
+                    <p>A 3-axis robot that paints watercolor based on sound. </p>
                     <a href="#" style="color:#E91E63; font-weight:bold;">[View Details]</a>
                 </div>
 
                 <div class="project-card">
                     <img src="project2.jpg" class="project-img">
-                    <h3>VR Haptic Glove</h3>
+                    <h3>Anomaly Detection for Under-Vehicle Inspection
+                     Using Synthetic and Real-World Data</h3>
                     <p>Feeling digital textures in a virtual world.</p>
                     <a href="#" style="color:#E91E63; font-weight:bold;">[Read Paper]</a>
                 </div>
@@ -161,17 +169,23 @@
             <br><br>
             
             <div class="exp-item">
-                <span class="date">Fall 2024</span>
-                <h3>Intro to Physical Computing</h3>
+                <span class="date">Jan 2024 and Jan 2025 </span>
+                <h3>Intro to Artificial Intelligence</h3>
                 <i>Teaching Assistant</i>
                 <p>Helped 30 students debug Arduino code and soldering circuits. Held weekly office hours.</p>
             </div>
 
             <div class="exp-item">
-                <span class="date">Spring 2024</span>
-                <h3>Machine Learning 101</h3>
+                <span class="date">Feb 2024</span>
+                <h3>Advanced Artificial Intelligence</h3>
                 <i>Grader</i>
-                <p>Graded Python assignments and final projects.</p>
+                <p>Graded Python assignments and final projects. </p>
+            </div>
+            <div class="exp-item">
+                <span class="date">July 2025 2024</span>
+                <h3>Advanced Computer Vision</h3>
+                <i>Grader</i>
+                <p>Graded Python assignments and final projects. </p>
             </div>
         </div>
 
